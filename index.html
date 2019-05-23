@@ -1,190 +1,387 @@
 <!DOCTYPE html>
 <html>
-    <title>W3.CSS Template</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/style-004.css">
+    <head>
+        <title>W3.CSS Template</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/style-004.css">
+
+    </head>
+
     <body class="w3-light-grey">
 
         <!-- Navigation Bar -->
-        <div class="w3-bar w3-white w3-border-bottom w3-xlarge">
-            <a href="#" class="w3-bar-item w3-button w3-text-red w3-hover-red"><b><i class="fa fa-map-marker w3-margin-right"></i>Logo</b></a>
-            <a href="#" class="w3-bar-item w3-button w3-right w3-hover-red w3-text-grey"><i class="fa fa-search"></i></a>
+        <div class="w3-bar w3-white w3-border-bottom w3-xlarge w3-top" style="z-index: 101;">
+            <a href="#" class="w3-bar-item w3-button w3-text-red w3-hover-#3399ff"><b><i class="fa fa-map-marker w3-margin-right"></i>Roadtrip</b></a>
+            <a href="#" class="w3-bar-item w3-button w3-right w3-hover-#3399ff w3-text-#3399ff"><i class="fa fa-search"></i></a>
         </div>
 
         <!-- Header -->
-        <header class="w3-display-container w3-content w3-hide-small" style="max-width:1500px">
-            <img class="w3-image" src="img/MAP-2.gif" alt="Map" width="1500" height="700">
-            <div class="w3-display-middle" style="width:65%">
+        <header class="w3-content w3-hide-small" style="max-width:1500px; margin-top: 50px;">
+            <video autoplay muted loop id="myVideo" style="z-index: -1;">
+                <source src="img/Time%20Lapse%20Video%20Of%20Roadtrip.mp4" type="video/mp4">
+            </video>
+      
+                 <div class="w3-display-middle" style="width:65%; z-index: 100;">
                 <div class="w3-bar w3-black">
-                    <button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'Flight');"><i class="fa fa-plane w3-margin-right"></i>Gas Prices</button>
-                    <button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'Routes');"><i class="fa fa-bed w3-margin-right"></i>Routes</button>
-                    <button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'Car');"><i class="fa fa-car w3-margin-right"></i>Brands</button>
-                    <button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'Hotels');"><i class="fa fa-car w3-margin-right">
-                        </i>Hotels</button>
+                    <button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'Gas');"><i class="fas fa-gas-pump w3-margin-right"></i>Gas Prices</button>
+                    <button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'Routes');"><i class="fas fa-route w3-margin-right"></i>Routes</button>
+                    <button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'Hotels');"><i class="fas fa-hotel w3-margin-right"></i>Hotels</button>
                 </div>
 
-                <!-- Tabs -->
-                <div id="Flight" class="w3-container w3-white w3-padding-16 myLink">
-                    <h3>Get Pumped!!!</h3>
-                <p>What State are you in?</p>
-                    </div>
-                    <div class="w3-dropdown-hover">
-                        <button class="w3-button w3-black">A-M</button>
-                        <div class="w3-dropdown-content w3-bar-block w3-border">
-                            <a href="#" class="w3-bar-item w3-button">Link 1</a>
-                            <a href="#" class="w3-bar-item w3-button">Link 2</a>
-                            <a href="#" class="w3-bar-item w3-button">Link 3</a>
+                    <!-- Tabs -->
+                    <div id="Gas" class="w3-container w3-white w3-padding-16 myLink">
+                        <h3>Get Pumped!!!</h3>
+                        <p>What State are you in?</p>
 
-                            <div id="Routes" class="w3-container w3-white w3-padding-16 myLink">
-                                <h3>Find the best routes to travel the country!</h3>
-                                <div class="w3-container">
-                                    <div class="w3-card" style="width:50%">
-                                        <img src="img/map2.jpg" alt="map" style="width:100%">
-                                        <div class="w3-container">
-                                            <h4><b>Route 1</b></h4>
-                                            <p>Cross Country Route</p>
-                                        </div></div></div></div></div> 
-                        <div id="Routes" class="w3-container w3-white w3-padding-16 myLink">
-                            <div class="w3-container">
-                                <div class="w3-card" style="width:50%">
-                                    <img src="img/map.jpg" alt="map" style="width:100%">
+                        <div class="w3-container">
+                            <button onclick="document.getElementById('id03').style.display='block'" class="w3-button w3-black">A-L</button>
+
+                            <div id="id03" class="w3-modal">
+                                <div class="w3-modal-content width: auto;">
                                     <div class="w3-container">
-                                        <h4><b>Route 2</b></h4>
-                                    </div></div></div>
-
-
-
-                            <div id="Car" class="w3-container w3-white w3-padding-16 myLink">
-                                <h3>Best car rental in the world!</h3>
-                                <p><span class="w3-tag w3-deep-orange">DISCOUNT!</span> Special offer if you book today: 25% off anywhere in the world with CarServiceRentalRUs</p>
-                                <input class="w3-input w3-border" type="text" placeholder="Pick-up point">
-                                <p><button class="w3-button w3-dark-grey">Search Availability</button></p>
-                            </div>
-                        </div>
-                        </header>
-
-
-                    <!-- Page content -->
-                    <div class="w3-content" style="max-width:1100px;">
-
-                        <!-- Good offers -->
-                        <div class="w3-container w3-margin-top">
-                            <h3>Good Offers Right Now</h3>
-                            <h6>Up to <strong>50%</strong> discount.</h6>
-                        </div>
-                        <div class="w3-row-padding w3-text-white w3-large">
-                            <div class="w3-half w3-margin-bottom">
-                                <div class="w3-display-container">
-                                    <img src="/w3images/cinqueterre.jpg" alt="Cinque Terre" style="width:100%">
-                                    <span class="w3-display-bottomleft w3-padding">Cinque Terre</span>
-                                </div>
-                            </div>
-                            <div class="w3-half">
-                                <div class="w3-row-padding" style="margin:0 -16px">
-                                    <div class="w3-half w3-margin-bottom">
-                                        <div class="w3-display-container">
-                                            <img src="/w3images/newyork2.jpg" alt="New York" style="width:100%">
-                                            <span class="w3-display-bottomleft w3-padding">New York</span>
-                                        </div>
-                                    </div>
-                                    <div class="w3-half w3-margin-bottom">
-                                        <div class="w3-display-container">
-                                            <img src="/w3images/sanfran.jpg" alt="San Francisco" style="width:100%">
-                                            <span class="w3-display-bottomleft w3-padding">San Francisco</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="w3-row-padding" style="margin:0 -16px">
-                                    <div class="w3-half w3-margin-bottom">
-                                        <div class="w3-display-container">
-                                            <img src="/w3images/pisa.jpg" alt="Pisa" style="width:100%">
-                                            <span class="w3-display-bottomleft w3-padding">Pisa</span>
-                                        </div>
-                                    </div>
-                                    <div class="w3-half w3-margin-bottom">
-                                        <div class="w3-display-container">
-                                            <img src="/w3images/paris.jpg" alt="Paris" style="width:100%">
-                                            <span class="w3-display-bottomleft w3-padding">Paris</span>
-                                        </div>
+                                        <span onclick="document.getElementById('id03').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+                                        <a href="#" class="w3-bar-item w3-button">Alabama: $2.49/gallon</a>
+                                        <a href="#" class="w3-bar-item w3-button">Alaska: $3.22/gallon</a>
+                                        <a href="#" class="w3-bar-item w3-button">Arizona:$3.04/gallon</a>
+                                        <a href="#" class="w3-bar-item w3-button">Arkansas: $2.53/ gallon</a>
+                                        <a href="#" class="w3-bar-item w3-button">California: $4.02/ gallon</a>
+                                        <a href="#" class="w3-bar-item w3-button">Colorado: $2.71/ gallon</a>
+                                        <a href="#" class="w3-bar-item w3-button">Connecticut: $2.87/ gallon</a>
+                                        <a href="#" class="w3-bar-item w3-button">Delaware: $2.67/ gallon</a>
+                                        <a href="#" class="w3-bar-item w3-button">Florida: $2.72/ gallon</a>
+                                        <a href="#" class="w3-bar-item w3-button">Georgia: $2.67/ gallon</a>
+                                        <a href="#" class="w3-bar-item w3-button">Hawaii:$3.54/ gallon</a>
+                                        <a href="#" class="w3-bar-item w3-button">Idaho:$2.93/ gallon</a>
+                                        <a href="#" class="w3-bar-item w3-button">Illinois: $2.99/ gallon</a>
+                                        <a href="#" class="w3-bar-item w3-button">Indiana: $2.83/ gallon</a>
+                                        <a href="#" class="w3-bar-item w3-button">Iowa:$2.78/ gallon</a>
+                                        <a href="#" class="w3-bar-item w3-button">Kansas:$2.63/ gallon</a>
+                                        <a href="#" class="w3-bar-item w3-button">Kentucky: $2.67/ gallon</a>
+                                        <a href="#" class="w3-bar-item w3-button">Louisiana: $2.5/ gallon</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
-
-                        <!-- Explore Nature -->
                         <div class="w3-container">
-                            <h3>Explore Nature</h3>
-                            <p>Travel with us and see nature at its finest.</p>
-                        </div>
-                        <div class="w3-row-padding">
-                            <div class="w3-half w3-margin-bottom">
-                                <img src="/w3images/ocean2.jpg" alt="Norway" style="width:100%">
-                                <div class="w3-container w3-white">
-                                    <h3>West Coast, Norway</h3>
-                                    <p class="w3-opacity">Roundtrip from $79</p>
-                                    <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                    <button class="w3-button w3-margin-bottom">Buy Tickets</button>
+                            <button onclick="document.getElementById('id04').style.display='block'" class="w3-button w3-black">M-Z</button>
+
+                            <div id="id04" class="w3-modal">
+                                <div class="w3-modal-content">
+                                    <div class="w3-container">
+                                        <span onclick="document.getElementById('id04').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+                                        <a href="#" class="w3-bar-item w3-button">Maine:$2.74/ gallon</a>
+                                        <a href="#" class="w3-bar-item w3-button">Maryland: $2.76/ gallon</a>
+                                        <a href="#" class="w3-bar-item w3-button">Massachusetts: $2.71/ gallon</a>
+                                        <a href="#" class="w3-bar-item w3-button">Michigan: $2.80/ gallon</a>
+                                        <a href="#" class="w3-bar-item w3-button">Minnesota: $2.75/ gallon</a>
+                                        <a href="#" class="w3-bar-item w3-button">Mississippi: $2.50/ gallon</a>
+                                        <a href="#" class="w3-bar-item w3-button">Missouri: $2.61/ gallon</a>
+                                        <a href="#" class="w3-bar-item w3-button">Montana: $2.79/ gallon</a>
+                                        <a href="#" class="w3-bar-item w3-button">Nebraska:$2.81/ gallon</a>
+                                        <a href="#" class="w3-bar-item w3-button">Nevada:$3.34/ gallon</a>
+                                        <a href="#" class="w3-bar-item w3-button">New Hampshire: $2.68/ gallon</a>
+                                        <a href="#" class="w3-bar-item w3-button">New Jersey: $2.83/ gallon</a>
+                                        <a href="#" class="w3-bar-item w3-button">New Mexico: $2.74/ gallon</a>
+                                        <a href="#" class="w3-bar-item w3-button">New York: $2.87/ gallon</a>
+                                        <a href="#" class="w3-bar-item w3-button">North Carolina: $2.66/ gallon</a>
+                                        <a href="#" class="w3-bar-item w3-button">North Dakota: $2.73/ gallon</a>
+                                        <a href="#" class="w3-bar-item w3-button">Ohio:$2.64/ gallon</a>
+                                        <a href="#" class="w3-bar-item w3-button">Oklahoma: $2.56/ gallon</a>
+                                        <a href="#" class="w3-bar-item w3-button">Oregon: $3.35/ gallon</a>
+                                        <a href="#" class="w3-bar-item w3-button">Pennsylvania: $2.99/ gallon</a>
+                                        <a href="#" class="w3-bar-item w3-button">Rhode Island: $2.73/ gallon</a>
+                                        <a href="#" class="w3-bar-item w3-button">South Carolina: $2.51/ gallon</a>
+                                        <a href="#" class="w3-bar-item w3-button">South Dakota: $2.73/ gallon</a>
+                                        <a href="#" class="w3-bar-item w3-button">Tennessee: $2.60/ gallon</a>
+                                        <a href="#" class="w3-bar-item w3-button">Texas:$2.56/ gallon</a>
+                                        <a href="#" class="w3-bar-item w3-button">Utah:$2.81/ gallon</a>
+                                        <a href="#" class="w3-bar-item w3-button">Vermont: $2.76/ gallon</a>
+                                        <a href="#" class="w3-bar-item w3-button">Virginia: $2.60/ gallon</a>
+                                        <a href="#" class="w3-bar-item w3-button">Washington: $3.45/ gallon</a>
+                                        <a href="#" class="w3-bar-item w3-button">West Virginia: $2.75/ gallon</a>
+                                        <a href="#" class="w3-bar-item w3-button">Wisconsin: $2.82/ gallon</a>
+                                        <a href="#" class="w3-bar-item w3-button">Wyoming: $2.66/ gallon</a>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="w3-half w3-margin-bottom">
-                                <img src="/w3images/mountains2.jpg" alt="Austria" style="width:100%">
-                                <div class="w3-container w3-white">
-                                    <h3>Mountains, Austria</h3>
-                                    <p class="w3-opacity">One-way from $39</p>
-                                    <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                    <button class="w3-button w3-margin-bottom">Buy Tickets</button>
-                                </div>
-                            </div>
                         </div>
 
-                        <!-- Newsletter -->
-                        <div class="w3-container">
-                            <div class="w3-panel w3-padding-16 w3-black w3-opacity w3-card w3-hover-opacity-off">
-                                <h2>Get the best offers first!</h2>
-                                <p>Join our newsletter.</p>
-                                <label>E-mail</label>
-                                <input class="w3-input w3-border" type="text" placeholder="Your Email address">
-                                <button type="button" class="w3-button w3-red w3-margin-top">Subscribe</button>
-                            </div>
-                        </div>
 
-                        <!-- Contact -->
-                        <div class="w3-container">
-                            <h2>Contact</h2>
-                            <p>Let us book your next trip!</p>
-                            <i class="fa fa-map-marker" style="width:30px"></i> Chicago, US<br>
-                            <i class="fa fa-phone" style="width:30px"></i> Phone: +00 151515<br>
-                            <i class="fa fa-envelope" style="width:30px"> </i> Email: mail@mail.com<br>
-                            <form action="/action_page.php" target="_blank">
-                                <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Name" required name="Name"></p>
-                                <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Email" required name="Email"></p>
-                                <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Message" required name="Message"></p>
-                                <p><button class="w3-button w3-black w3-padding-large" type="submit">SEND MESSAGE</button></p>
-                            </form>
-                        </div>
-
-                        <!-- End page content -->
                     </div>
 
-                    <!-- Footer -->
-                    <footer class="w3-container w3-center w3-opacity w3-margin-bottom">
-                        <h5>Find Us On</h5>
-                        <div class="w3-xlarge w3-padding-16">
-                            <i class="fa fa-facebook-official w3-hover-opacity"></i>
-                            <i class="fa fa-instagram w3-hover-opacity"></i>
-                            <i class="fa fa-snapchat w3-hover-opacity"></i>
-                            <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-                            <i class="fa fa-twitter w3-hover-opacity"></i>
-                            <i class="fa fa-linkedin w3-hover-opacity"></i>
+                    <div id="Routes" class="w3-container w3-white w3-padding-16 myLink">
+                        <div class="dropdown">
+                            <img src="img/route66.jpg" alt="map1" width="100" height="50">
+                            <div class="dropdown-content">
+                                <img src="img/route66.jpg" alt="map1" width="300" height="200">
+                                <div class="desc">Route 1: Travel along Route 66 (See below for more Information)</div>
+                            </div>
                         </div>
-                        <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" class="w3-hover-text-green">w3.css</a></p>
-                    </footer>
+                        <div class="dropdown">
+                            <img src="img/Untitled.jpg"alt="map1" width="100" height="50">
+                            <div class="dropdown-content">
+                                <img src="img/Untitled.jpg"alt="map1" width="300" height="200">
+                                <div class="desc">Route 2: Cross Country Map(See Hotels tab for more information)</div>
+                            </div>
+                        </div>
+                    </div>
 
-                    <!-- JavaScript -->
-                    <script src="js/slideshow.js"></script>
-                    </body>
-                </html>
+                    <div id="Hotels" class="w3-container w3-white w3-padding-16 myLink">
+                        <h3>Cross Country Route: Hotels closest to Capital Buildings</h3> 
+
+
+                        <div class="w3-container">
+                            <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-black">State Capital Address</button>
+
+                            <div id="id01" class="w3-modal">
+                                <div class="w3-modal-content width: auto;">
+                                    <div class="w3-container">
+                                        <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+                                        <p>State House, 107 North Main Street, Concord, NH 03303</p>
+                                        <p>Maine State House, Augusta, ME 04330</p>
+                                        <p>Vermont State House, 115 State Street, Montpelier, VT 05633</p>
+                                        <p>New York State Capitol, State St. and Washington Ave, Albany, NY 12224 3</p>
+                                        <p>New Jersey State House, Trenton, NJ 08608</p>
+                                        <p>Pennsylvania State Capitol Building, North 3rd Street, Harrisburg, PA 17120</p>
+                                        <p>West Virginia State Capitol, Charleston, WV 25317</p>
+                                        <p>Ohio State Capitol, 1 Capitol Square, Columbus, OH 43215</p>
+                                        <p>Kentucky State Capitol Building, 700 Capitol Avenue, Frankfort, KY 40601</p>
+                                        <p>Tennessee State Capitol, 600 Charlotte Avenue, Nashville, TN 37243</p>
+                                        <p>Indiana State Capitol, Indianapolis, IN 46204</p>
+                                        <p>Michigan State Capitol, Lansing, MI 48933</p>
+                                        <p>Illinois State Capitol, Springfield, IL 62756</p>
+                                        <p>2 E Main St, Madison, WI 53703</p>
+                                        <p>Minnesota State Capitol, St Paul, MN 55155</p>
+                                        <p>500 E Capitol Ave, Pierre, SD 57501</p>
+                                        <p>North Dakota State Capitol, Bismarck, ND 58501</p>
+                                        <p>Montana State Capitol, 1301 E 6th Ave, Helena, MT 59601</p>
+                                        <p>Washington State Capitol Bldg, 416 Sid Snyder Ave SW, Olympia, WA 98504 </p>
+                                        <p>Oregon State Capitol, 900 Court St NE, Salem, OR 97301</p>
+                                        <p>L St & 10th St, Sacramento, CA 95814</p>
+                                        <p>Nevada State Capitol, Carson City, NV 89701</p>
+                                        <p>700 W Jefferson St, Boise, ID 83720</p>
+                                        <p>Utah State Capitol, Salt Lake City, UT 84103</p>
+                                        <p>Wyoming State Capitol, Cheyenne, WY 82001</p>
+                                        <p>200 E Colfax Ave, Denver, CO 80203</p>
+                                        <p>New Mexico State Capitol, Santa Fe, NM 87501</p>
+                                        <p>Arizona State Capitol, 1700 W Washington St, Phoenix, AZ 85007</p>
+                                        <p>Texas Capitol, 1100 Congress Avenue, Austin, TX 78701</p>
+                                        <p>Oklahoma State Capitol, Oklahoma City, OK 73105</p>
+                                        <p>300 SW 10th Ave, Topeka, KS 66612</p>
+                                        <p>Nebraska State Capitol, 1445 K Street, Lincoln, NE 68509</p>
+                                        <p>Iowa State Capitol, 1007 E Grand Ave, Des Moines, IA 50319</p>
+                                        <p>Missouri State Capitol, Jefferson City, MO 65101 </p>
+                                        <p>Arkansas State Capitol, 500 Woodlane Street, Little Rock, AR 72201 </p>
+                                        <p>400-498 N West St, Jackson, MS 39201</p>
+                                        <p>Louisiana State Capitol, Baton Rouge, LA 70802</p>
+                                        <p>402 S Monroe St, Tallahassee, FL 32301</p>
+                                        <p>Alabama State Capitol, 600 Dexter Avenue, Montgomery, AL 36130 </p>
+                                        <p>Georgia State Capitol, Atlanta, GA 30334</p>
+                                        <p>South Carolina State House, 1100 Gervais Street, Columbia, SC 29201</p>
+                                        <p>North Carolina State Capitol, Raleigh, NC 27601</p>
+                                        <p>Virginia State Capitol, Richmond, VA 23219</p>
+                                        <p>Maryland State House, 100 State Cir, Annapolis, MD 21401</p>
+                                        <p>Legislative Hall: The State Capitol, Legislative Avenue, Dover, DE 19901</p>
+                                        <p>Connecticut State Capitol, 210 Capitol Ave, Hartford, CT 06106</p>
+                                        <p>Rhode Island State House, 82 Smith Street, Providence, RI 02903</p>
+                                        <p>Massachusetts State House, Boston, MA 02108</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="w3-container">
+                            <button onclick="document.getElementById('id02').style.display='block'" class="w3-button w3-black">Closest Hotel Adresses</button>
+
+                            <div id="id02" class="w3-modal">
+                                <div class="w3-modal-content">
+                                    <div class="w3-container">
+                                        <span onclick="document.getElementById('id02').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+                                        <p>Holiday Inn Concord Downtown 172 N Main St, Concord, NH 03301</p>
+                                        <p>Senator Inn and Spa 284 Western Ave, Augusta, ME 04330</p>
+                                        <p>Capitol Plaza Hotel 100 State St, Montpelier, VT 05602</p>
+                                        <p>Renaissance Albany Hotel 144 State St, Albany, NY 12207</p>
+                                        <p>Welcome Hotel Group LLC 1 W Lafayette St</p>
+                                        <p>Hilton Harrisburg 1 N 2nd St, Harrisburg, PA 17101</p>
+                                        <p>Brass Pineapple Inn 1611 Virginia St East, Charleston, WV 25311, USA</p>
+                                        <p>Sheraton Columbus Capitol Square 75 E State St, Columbus, OH 43215</p>
+                                        <p>Capitol Plaza Hotel  405 Wilkinson Blvd, Frankfort, KY 40601</p>
+                                        <p>DoubleTree by Hilton Hotel Nashville Downtown 315 4th Ave N, Nashville, TN 37219</p>
+                                        <p>The Westin Indianapolis 241 W Washington St, Indianapolis, IN 46204</p>
+                                        <p>Radisson Hotel Lansing at the Capitol 111 N Grand Ave, Lansing, MI 48933</p>
+                                        <p>Carpenter Street Hotel 525 N 6th St, Springfield, IL 62702</p>
+                                        <p> AC hotel by Marriott Madison Downtown 1 N Webster St, Madison, WI 53703</p>
+                                        <p>Best Western Plus Capitol Ridge 161 St Anthony Ave, St Paul, MN 55103</p>
+                                        <p>Terrace Motel Apartments 231 N Euclid Ave, Pierre, SD 57501</p>
+                                        <p>Ramada By Wyndham Bismarck 1124 E Capitol Ave, Bismarck, ND 58501</p>
+                                        <p> The Sleepy Senator 401 N Hoback St, Helena, MT 59601</p>
+                                        <p>Towneplace Suites 900 Capitol Way S, Olympia, WA 98501</p>
+                                        <p>The Grand Hotel 201 Liberty St SE, Salem, OR 97301</p>
+                                        <p>Hyatt Regency Sacramento 1209 L St, Sacramento, CA 95814</p>
+                                        <p> Bliss Bungalow 408 W Robinson St, Carson City, NV 89703</p>
+                                        <p>Hyatt Place 1024 W Bannock St, Boise, ID 83702</p>
+                                        <p>Radisson Salt Lake City Downtown 215 W S Temple, Salt Lake City, UT 84101</p>
+                                        <p>Towne Place Suites 1710 W Lincolnway, Cheyenne, WY 82001</p>
+                                        <p>The ART Hotel 1201 Broadway, Denver, CO 80203</p>
+                                        <p>La Fonda on the Plaza 100 E San Francisco St, Santa Fe, NM 87501</p>
+                                        <p>Lamp Lighter Motel 1945 W Van Buren St, Phoenix, AZ 85009</p>
+                                        <p> Doubletree Suites by Hilton Hotel Austin 303 W 15th St, Austin, TX 78701</p>
+                                        <p>Embassy Suites by Hilton Oklahoma City Downtown Medical Center 741 N Phillips Ave</p>
+                                        <p>Grand York Rite of Kansas 320 SW 8th Ave</p>
+                                        <p>The Lincoln Marriott Cornhusker Hotel 333 S 13th Street </p>
+                                        <p>AC Hotel Des Moines East Village 401 E Grand Ave</p>
+                                        <p>Capitol Plaza Hotel- Jefferson City 415 W McCarty Street</p>
+                                        <p>Hotel Frederica 625 W Capitol Ave </p>
+                                        <p>Jackson Marriott 200 E Amite St</p>
+                                        <p>Watermark Baton Rouge 150 N 3rd Street</p>
+                                        <p> Doubletree by Hilton 101 S Adams St</p>
+                                        <p>Capitol Inn and Suites 743 Madison Ave</p>
+                                        <p>Home2 Suites by Hilton Atlanta Downtown 87 Walton St NW</p>
+                                        <p>Hilton Columbia Center 924 Senate St</p>
+                                        <p> Days Inn by Wyndham Raleigh Downtown 300 N Dawson St</p>
+                                        <p>The Commonwealth 901 Bank St</p>
+                                        <p>>Robert Johnson House 23 State Cir</p>
+                                        <p>Home2 Suites by Hilton Dover 222 S Dupont Hwy</p>
+                                        <p>Homewood Suites by Hilton Hartford Downtown 338 Asylum St</p> 
+                                        <p>Comfy Beacon Hill Studio 40 Temple Street</p>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+            </div>
+            
+            
+  
+
+           
+        </header>
+
+
+        <!-- Page content -->
+        <div class="w3-content" style="max-width:1100px; margin-top: 650px;">
+
+            <!-- Good offers -->
+            <div class="w3-container w3-margin-top">
+                <h3>Route 66</h3>
+                <p>day 1: chicago IL ----- Closest Hotel Address: central loop hotel 111 w adams st</p>
+                <p> day 2: springfield il   -----  Closest Hotel Address: old luxemburg inn 1900 s 15th st</p>
+                <p>day 3: sullivan MO    -----   Closest Hotel Address: super 8 by wyndham sullivan 601 n service road</p>
+                <p>day 4: carthage MO         -----  Closest Hotel Address: kel-lake motel 13071 state highway 96</p>
+                <p>day 5: tulsa OK          -----  Closest Hotel Address: the mayo hotel 115 west 5th street </p>
+                <p>day 6: clinton OK      ----- Closest Hotel Address:  super 8 by wyndham clinton 1120 s 10th street</p>
+                <p>day 7: amarillo TX      ----- Closest Hotel Address: ashmore inn and suites 2301 e interstate 40
+                <p>day 8: tucumcari NM   ----- Closest Hotel Address:  historic route 66 motel 1620 e route 6 blvd</p>
+                <p>day 9: albuquerque NM     ----- Closest Hotel Address: embassy suites by hilton albuquerque hotel 1000 woodward PI NE</p>
+                <p>day 10: gallup NM       ----- Closest Hotel Address: el rancho hotel 1000 e historic hwy 66
+                <p>day 11: flagstaff AZ   ----- Closest Hotel Closest Hotel Address: doubletree by hilton hotel flagstaff 115 w route 66
+                <p>day 12: seligman AZ        ----- Closest Hotel Address: historic route 66 motel 22750 w old highway 66
+                <p>day 13: needles CA  -----Closest Hotel  Address: needles marina resort 100 marina dr
+                <p>day 14: san bernardino CA-- ----- Closest Hotel Address: wigwam motel 2728 e foothill blvd</p>
+                <p>day 15:santa monica CA----- Closest Hotel Address: le meridien delfina santa monica 530 pico blvd  </p>
+
+
+
+
+
+
+            </div>
+            <div class="w3-row-padding w3-text-white w3-large">
+                <div class="w3-half w3-margin-bottom">
+                    <div class="w3-display-container">
+                        <img src="img/conn2.jpg"alt="Cinque Terre" style="width:100%">
+                    </div>
+                </div>
+                <div class="w3-half">
+                    <div class="w3-row-padding" style="margin:0 -16px">
+                        <div class="w3-half w3-margin-bottom">
+                            <div class="w3-display-container">
+                                <img src="img/texas23.jpg" alt="New York" style="width:100%">SSS
+                            </div>
+                        </div>
+                        <div class="w3-half w3-margin-bottom">
+                            <div class="w3-display-container">
+                                <img src="img/pool%20preserve23.jpg" alt="San Francisco" style="width:100%">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w3-row-padding" style="margin:0 -16px">
+                        <div class="w3-half w3-margin-bottom">
+                            <div class="w3-display-container">
+                                <img src="img/portland2.jpg" alt="Pisa" style="width:100%">
+                            </div>
+                        </div>
+                        <div class="w3-half w3-margin-bottom">
+                            <div class="w3-display-container">
+                                <img src="img/tahoe2.jpg"alt="Paris" style="width:100%">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Explore Nature -->
+            <div class="w3-container">
+                <h3>Travel the World Tickets</h3>
+            </div>
+            <div class="w3-row-padding">
+                <div class="w3-half w3-margin-bottom">
+                    <img src="img/rome.webp"alt="Norway" style="width:100%">
+                    <div class="w3-container w3-white">
+                        <h3>Rome</h3>
+                        <p class="w3-opacity">Roundtrip for $166</p>
+                        <a href=https://www.tripadvisor.com/CheapFlightsSearchResults?geo=189430&cos=0&nonstop=no&pax0=a&travelers=1&airport0=ROM&nearby0=no&airport1=JMK&nearby1=no&date0=20190709&date1=20190725&formImp=b3b626a3-0115-45df-af27-cca211dbd6a9.19220       onclick="window.open(this.href); return false;" onkeypress="window.open(this.href); return false;">Buy Tickets</a>
+                    </div>
+                </div>
+                <div class="w3-half w3-margin-bottom">
+                    <img src="img/myko.jpg" alt="Austria" style="width:100%">
+                    <div class="w3-container w3-white">
+                        <h3>Mykonos</h3>
+                        <p class="w3-opacity">One-way for $83</p>
+                        <a href="https://www.tripadvisor.com/CheapFlightsSearchResults?geo=189430&cos=0&nonstop=no&pax0=a&travelers=1&airport0=ROM&nearby0=no&airport1=JMK&nearby1=no&date0=20190709&formImp=582f6f64-38e7-4b78-a06b-9030bd927f23.19287"  onclick="window.open(this.href); return false;" onkeypress="window.open(this.href); return false;">Buy Tickets</a>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Contact -->
+            <div class="w3-container">
+                <h2>Contact</h2>
+                <p>Let us book your next trip!</p>
+                <i class="fa fa-map-marker" style="width:30px"></i> Andover, MA<br>
+                <i class="fa fa-phone" style="width:30px"></i> Hailey's Phone: 978-289-7170<br>
+                <i class="fa fa-phone" style="width:30px"></i> Courtney's Phone: 978-806-6569<br>
+                <i class="fa fa-envelope" style="width:30px"> </i> Hailey's Email: hdoherty2022@k12.andoverma.us<br>
+                <i class="fa fa-envelope" style="width:30px"> </i> Courtney's Email: cduffy2022@k12.andoverma.us<br>
+            </div>
+
+            <!-- End page content -->
+        </div>
+
+        <!-- Footer -->
+        <footer class="w3-container w3-center w3-opacity w3-margin-bottom">
+            <h5>Find Us On</h5>
+            <div class="w3-xlarge w3-padding-16">
+                <i class="fa fa-facebook-official w3-hover-opacity"></i>
+                <i class="fa fa-instagram w3-hover-opacity"></i>
+                <i class="fa fa-snapchat w3-hover-opacity"></i>
+                <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+                <i class="fa fa-twitter w3-hover-opacity"></i>
+                <i class="fa fa-linkedin w3-hover-opacity"></i>
+            </div>
+        </footer>
+
+
+        <!-- JavaScript -->
+        <script src="js/slideshow.js"></script>
+    </body>
+</html>
